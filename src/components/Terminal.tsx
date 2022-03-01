@@ -4,20 +4,19 @@ import type { CSS } from "@stitches/react";
 import * as ContextMenu from "@radix-ui/react-context-menu";
 import { CheckIcon } from "@radix-ui/react-icons";
 
+interface TData {
+  data: string[];
+  setData: (data: string[]) => void;
+}
+
 interface TerminalProps {
-  renderData: {
-    data: string[];
-    setData: (data: string[]) => void;
-  };
+  renderData: TData;
   terminalStyle?: CSS;
 }
 
 interface TerminalContextProps {
   children: React.ReactNode;
-  renderData: {
-    data: string[];
-    setData: (data: string[]) => void;
-  };
+  renderData: TData;
   darkmode?: {
     dark: boolean;
     setDark: (dark: boolean) => void;
@@ -27,7 +26,7 @@ interface TerminalContextProps {
 export const Terminal = ({ renderData, terminalStyle }: TerminalProps) => {
   const { data, setData } = renderData;
   const messageEndRef = useRef<HTMLDivElement>(null);
-  const [dark, setDark] = useState(true);
+  const [dark, setDark] = useState(false);
 
   const scrollToBottom = () => {
     messageEndRef.current?.scrollIntoView({ behavior: "smooth" });
