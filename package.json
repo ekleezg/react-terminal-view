@@ -4,8 +4,8 @@
   "description": "A React Terminal Console Component",
   "main": "dist/index.js",
   "scripts": {
-    "build": "webpack --mode production",
-    "dev": "webpack-dev-server --mode development"
+    "build": "rm -rf dist && webpack --config webpack.prod.js",
+    "start": "webpack-dev-server --config webpack.dev.js"
   },
   "author": "",
   "license": "MIT",
@@ -31,6 +31,7 @@
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
     "@babel/preset-typescript": "^7.16.7",
-    "babel-loader": "^8.2.3"
+    "babel-loader": "^8.2.3",
+    "run-script-os": "^1.1.6"
   }
 }
