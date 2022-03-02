@@ -1,4 +1,4 @@
-# Terminal Style Console
+# React Terminal View
 
 A simple [React](https://github.com/facebook/react) console component.
 
