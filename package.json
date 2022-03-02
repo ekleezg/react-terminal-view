@@ -1,16 +1,18 @@
 {
-  "name": "terminal",
+  "name": "terminal-console",
   "version": "1.0.0",
-  "description": "A React Terminal Component",
-  "main": "index.js",
+  "description": "A React Terminal Console Component",
+  "main": "dist/index.js",
   "scripts": {
-    "build:dev": "webpack --mode development",
-    "build:prod": "webpack --mode production",
-    "dev": "webpack-dev-server --mode development",
-    "dev:prod": "webpack-dev-server --mode production"
+    "build": "webpack --mode production",
+    "dev": "webpack-dev-server --mode development"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
   "dependencies": {
     "@radix-ui/react-context-menu": "^0.1.6",
     "@radix-ui/react-icons": "^1.1.0",
@@ -18,8 +20,6 @@
     "@types/react": "^17.0.39",
     "@types/react-dom": "^17.0.11",
     "html-webpack-plugin": "^5.5.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
     "ts-loader": "^9.2.6",
     "typescript": "^4.5.5",
     "webpack": "^5.69.1",

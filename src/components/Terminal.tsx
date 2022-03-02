@@ -4,17 +4,17 @@ import type { CSS } from "@stitches/react";
 import * as ContextMenu from "@radix-ui/react-context-menu";
 import { CheckIcon } from "@radix-ui/react-icons";
 
-interface TData {
+export interface TData {
   data: string[];
   setData: (data: string[]) => void;
 }
 
-interface TerminalProps {
+export interface TerminalProps {
   renderData: TData;
   terminalStyle?: CSS;
 }
 
-interface TerminalContextProps {
+export interface TerminalContextProps {
   children: React.ReactNode;
   renderData: TData;
   darkmode?: {
