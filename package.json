@@ -4,7 +4,10 @@
   "description": "A React Terminal Console Component",
   "main": "dist/index.js",
   "scripts": {
-    "build": "rm -rf dist && webpack --config webpack.prod.js",
+    "build": "run-script-os",
+    "build:linux:darwin": "rm -rf dist && webpack --config webpack.prod.js",
+    "build:win32": "rd /s /q dist && webpack --config webpack.prod.js",
+    "build:default": "rd /s /q dist && webpack --config webpack.prod.js",
     "start": "webpack-dev-server --config webpack.dev.js"
   },
   "author": "",
